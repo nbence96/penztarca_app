@@ -1,0 +1,26 @@
+<script src="https://js.stripe.com/v3/"></script>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title slot="start">
+      Bejelentkezés
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/registration']" fill="clear">
+        Regisztráció
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding center">
+  <form id="form" fxLayout="column" [formGroup]="loginData" (ngSubmit)="logForm()">
+    <ion-item>
+      <ion-input formControlName="email" type="email" placeholder="E-mail cím"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input formControlName="pass" [type]="showPassword ? 'text' : 'password'" placeholder="Jelszó"></ion-input>
+      <ion-icon slot="end" [name]="passToogleIcon" (click)="tooglePassword()"></ion-icon>
+    </ion-item>
+    <ion-button shape="round" type="submit">Bejelentkezés</ion-button>
+  </form>
+</ion-content>

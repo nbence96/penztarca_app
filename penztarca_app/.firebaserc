@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "penztarca-webapp": {
+      "hosting": {
+        "app": [
+          "penztarca-webapp"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "penztarca-webapp"
+  }
+}
